@@ -1,6 +1,6 @@
-//var annee = 2016;
+var annee = 2016;
 
-var annee = prompt("Entrez une année");
+//var annee = prompt("Entrez une année");
 
 if ((annee % 4 === 0 && annee %100 > 0) || annee % 400 === 0) {
 	console.log(annee +" est bissextile");
