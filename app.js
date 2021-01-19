@@ -1,42 +1,36 @@
-var questions = [
-    {
-        question: 'Est-ce que tu aime le JavaScript ?',
-        reponse : 'Oui'
-    },
-    {
-        question: 'Le JavaScript est une évolution du Java ?',
-        reponse : 'Non'
-    },
-    {
-        question: 'Le JavaScript est proche du Java ?',
-        reponse : 'Non'
-    },
-    {
-        question: 'Le JavaScript est un langage d\'objet par prototypage ?',
-        reponse : 'Oui'
-    },
-    {
-        question: 'Le JavaScript est souvent utilisé coté client ?',
-        reponse : 'Oui'
-    },
-    {
-        question: 'Le JavaScript peut être utilisé coté client et serveur ?',
-        reponse : 'Oui'
-    }
-];
-
-var bonne_reponse = 0;
-for(var index = 0; index < questions.length; index++){
-    if (prompt(questions[index].question).toLowerCase() == questions[index].reponse.toLowerCase()) {
-        console.log("Bonne reponse à la question" +questions[index].question);
-
-        bonne_reponse++;
-
-    }else{
-        console.log("Faux! La reponse à la question" +questions[index].question +
-            " etait" +questions[index].reponse);
-    }
+var bonjour = function () {
+    console.log("variable");
 }
 
-console.log(bonne_reponse+" sur "+ questions.length);
-document.write("<div>"+bonne_reponse+" sur "+ questions.length+"</div>")
+
+var additionner =function (chiffre1,chiffre2) {
+ 
+    return chiffre1+chiffre2;
+}
+
+
+function addition(chiffre1,chiffre2) {
+   
+    return chiffre1+chiffre2;
+}
+//console.log(addition(6,4));
+
+function soustraction(chiffre1,chiffre2) {
+   
+    return chiffre1-chiffre2;
+}
+
+function division(chiffre1,chiffre2) {
+   
+    return chiffre1/chiffre2;
+}
+
+function multiplication(chiffre1,chiffre2) {
+   
+    return chiffre1*chiffre2;
+}
+
+function modulo(chiffre1,chiffre2) {
+   
+    return chiffre1%chiffre2;
+}
