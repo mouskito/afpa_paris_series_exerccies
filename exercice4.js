@@ -4,7 +4,7 @@ document.write(fruits);
 console.log(fruits.join());
 
 /* Je demande à l'utilisateur de saisir un fruit avec prompt */
-var saisi_utilisateur = prompt('Saisir un fruit');
+/*var saisi_utilisateur = prompt('Saisir un fruit');
 for(var index=0; index < fruits.length; index++){
 	//console.log("test");
 
@@ -14,3 +14,4 @@ for(var index=0; index < fruits.length; index++){
 	}
 }
 console.log(fruits);
+*/
