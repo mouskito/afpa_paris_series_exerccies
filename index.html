@@ -2,18 +2,45 @@
 <html>
 <head>
 	<title>Exercice 1</title>
+	<style type="text/css">
+		.nouvelle_classe{
+			color: red;
+		}
+
+	</style>
 </head>
 <body>
-	<p>Test1</p>
-	<p>Test2</p>
-	<p>Test3</p>
-	<p>Test4</p>
-	<p>Test5</p>
-	<p>Test6</p>
-	<p>Test1</p>
-	<p>Test8</p>
-	<p>Test1</p>
-	<p>Test10</p>
+	<div class="click" onclick="jeClique();">
+		Clique moi
+	</div>
+<hr><hr>
+	<div class="click" ondblclick="jeDoubleClique();">
+		Double Clique moi
+	</div>
+
+	<hr><hr><hr>
+	<div class="test">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+
+<hr><hr>
+<div class="container">
+	<input type="text" name="nombre1" id="nombre1">
+	<select id="operateur">
+		<option value="+">additionner</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+		<option value="%">%</option>
+	</select>	
+	<input type="text" name="nombre2" id="nombre2">
+	<button id="calculer">Calculer</button>
+</div>
 
 <script type="text/javascript" src="app.js"></script>
 </body>
