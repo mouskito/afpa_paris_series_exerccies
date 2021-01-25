@@ -31,43 +31,76 @@
 		</div>
 			<div id="message"></div>
 
+	<hr><hr><hr>
+	<style type="text/css">
+		.bloc{
+			width: 640px;
+			height: 426px;
+			border: 2px solid;
+		}
+
+		.bloc img{
+			width: 100%;
+			height: 100%;
+		}
+
+		.container1 img{
+			width: 100px;
+			height: 100px;
+		}
+		.container1{
+			display: flex;
+			flex-direction: column;
+			margin: 5px;
+			height: 500px;
+			flex-wrap: wrap;
+			border: 2px solid;
+			padding: 5px;
+			width: 750px;
+		}
+	</style>
+	<div class="bloc"></div>
+
+	<section class="container1">
+		<img src="photos/photo(1).jpeg" class="item">
+		<img src="photos/photo(2).jpeg" class="item">
+		<img src="photos/photo(3).jpeg" class="item">
+		<img src="photos/photo(4).jpeg" class="item">
+		<img src="photos/photo(5).jpeg" class="item">
+		<img src="photos/photo(6).jpeg" class="item">
+		<img src="photos/photo(7).jpeg" class="item">
+		<img src="photos/photo(8).jpeg" class="item">
+		<img src="photos/photo(9).jpeg" class="item">
+		<img src="photos/photo(10).jpeg" class="item">
+		<img src="photos/photo(11).jpeg" class="item">
+	</section>
 	</div>
 	<script type="text/javascript">
-		//var nom = prompt('Entrez votre nom');
-		//document.querySelector("title").innerHTML = "Bienvenue " +nom;
+		test2();
 
-		//EXERCICE2
-		document.querySelector('#apparaitre').onclick=function () {
-			document.querySelector('.exercice2').style.display="block";
-
-			//return false;
+		var test = function () {
+			alert('Je suis la variable');
+		}
+		test();
+		
+		function test2() {
+			alert('OK');
 		}
 
-		document.querySelector('#disparaitre').onclick=function () {
-			document.querySelector('.exercice2').style.display="none";
+		var toutes_les_images = document.querySelectorAll('.item');
 
-			//return false;
+		function clique() {
+			var getSrc = this.getAttribute('src');
+
+			console.log(this);
+			console.log(getSrc);
+			//var img_cliquee =' <img src="'+getSrc+'">'
+			document.querySelector('.bloc').innerHTML = this;
 		}
 
-		// EXERCICE3
-
-		console.log(document.querySelectorAll('.exercice3'));
-
-		document.querySelectorAll('.exercice3')[0].onmouseover=function () {
-			document.querySelector('#message').style.background='yellow';
-		document.querySelector('#message').innerHTML ="Saisir un chiffre";
+		for(var index = 0; index < toutes_les_images.length; index++){
+			toutes_les_images[index].addEventListener('click', clique);
 		}
-
-		document.querySelectorAll('.exercice3')[1].onmouseover=function () {
-			document.querySelector('#message').style.background='yellow';
-		document.querySelector('#message').innerHTML ="Saisir un chiffre";
-		}
-
-		document.querySelectorAll('.exercice3')[1].onmouseout=function () {
-			document.querySelector('#message').style.background='yellow';
-		document.querySelector('#message').innerHTML ="";
-		}
-
 	</script>
 </body>
 </html>
