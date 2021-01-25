@@ -8,13 +8,52 @@
 <body>
 
 	<div class="container">
-		<div id="bienvenue">
-			
+		<div id="bienvenue"></div>
+
+		<hr><hr>
+		<style type="text/css">
+			.exercice2{
+				display: none;
+			}
+		</style>
+		<div>
+			<a href="#" id="apparaitre">Faire apparaitre</a>
+			<a href="#" id="disparaitre">Faire disparaitre</a>
+
+			<p>apparaitre</p>
 		</div>
+
+		<div class="exercice2">
+
+			<input type="text" name="nombre1" id="nombre1">
+			<select id="operateur">
+				<option value="+">additionner</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+				<option value="%">%</option>
+			</select>	
+			<input type="text" name="nombre2" id="nombre2">
+			<button id="calculer">Calculer</button>
+		</div>
+
 	</div>
 	<script type="text/javascript">
-		var nom = prompt('Entrez votre nom');
-		document.querySelector("title").innerHTML = "Bienvenue " +nom;
+		//var nom = prompt('Entrez votre nom');
+		//document.querySelector("title").innerHTML = "Bienvenue " +nom;
+
+		//EXERCICE2
+		document.querySelector('#apparaitre').onclick=function () {
+			document.querySelector('.exercice2').style.display="block";
+
+			//return false;
+		}
+
+		document.querySelector('#disparaitre').onclick=function () {
+			document.querySelector('.exercice2').style.display="none";
+
+			//return false;
+		}
 	</script>
 </body>
 </html>
