@@ -11,21 +11,14 @@
 		<div id="bienvenue"></div>
 
 		<hr><hr>
-		<style type="text/css">
-			.exercice2{
-				display: none;
-			}
-		</style>
 		<div>
 			<a href="#" id="apparaitre">Faire apparaitre</a>
 			<a href="#" id="disparaitre">Faire disparaitre</a>
-
-			<p>apparaitre</p>
 		</div>
 
 		<div class="exercice2">
 
-			<input type="text" name="nombre1" id="nombre1">
+			<input type="text" name="nombre1" id="nombre1" class="exercice3">
 			<select id="operateur">
 				<option value="+">additionner</option>
 				<option value="-">-</option>
@@ -33,9 +26,10 @@
 				<option value="/">/</option>
 				<option value="%">%</option>
 			</select>	
-			<input type="text" name="nombre2" id="nombre2">
+			<input type="text" name="nombre2" id="nombre2" class="exercice3">
 			<button id="calculer">Calculer</button>
 		</div>
+			<div id="message"></div>
 
 	</div>
 	<script type="text/javascript">
@@ -54,6 +48,26 @@
 
 			//return false;
 		}
+
+		// EXERCICE3
+
+		console.log(document.querySelectorAll('.exercice3'));
+
+		document.querySelectorAll('.exercice3')[0].onmouseover=function () {
+			document.querySelector('#message').style.background='yellow';
+		document.querySelector('#message').innerHTML ="Saisir un chiffre";
+		}
+
+		document.querySelectorAll('.exercice3')[1].onmouseover=function () {
+			document.querySelector('#message').style.background='yellow';
+		document.querySelector('#message').innerHTML ="Saisir un chiffre";
+		}
+
+		document.querySelectorAll('.exercice3')[1].onmouseout=function () {
+			document.querySelector('#message').style.background='yellow';
+		document.querySelector('#message').innerHTML ="";
+		}
+
 	</script>
 </body>
 </html>
