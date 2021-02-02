@@ -4,6 +4,8 @@
 	<title>Correction TP JS</title>
 	<!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
 </head>
 <body>
 
@@ -76,17 +78,7 @@
 	</section>
 	</div>
 	<script type="text/javascript">
-		test2();
-
-		var test = function () {
-			alert('Je suis la variable');
-		}
-		test();
-		
-		function test2() {
-			alert('OK');
-		}
-
+		/*
 		var toutes_les_images = document.querySelectorAll('.item');
 
 		function clique() {
@@ -94,13 +86,38 @@
 
 			console.log(this);
 			console.log(getSrc);
-			//var img_cliquee =' <img src="'+getSrc+'">'
-			document.querySelector('.bloc').innerHTML = this;
+			var img_cliquee =' <img src="'+getSrc+'">'
+			$('.bloc').innerHTML = img_cliquee;
 		}
 
 		for(var index = 0; index < toutes_les_images.length; index++){
 			toutes_les_images[index].addEventListener('click', clique);
+		}*/
+
+		// VERSION  js
+		//var toutes_les_images = document.querySelectorAll('.item');
+		//Version Jquery
+		var toutes_les_images = $('.item');
+
+		function clique() {
+			//var getSrc = this.getAttribute('src');
+			//Version Jquery
+			var getSrc = $(this).attr('src');
+
+			var img_cliquee =' <img src="'+getSrc+'">'
+			$('.bloc').html(img_cliquee);
 		}
+
+		/*for(var index = 0; index < toutes_les_images.length; index++){
+			toutes_les_images[index].addEventListener('click', clique);
+		}*/
+
+		$('.item').each(function (index) {
+			console.log("ma boucle :  " +index)
+			$('.item')[index].addEventListener('click', clique);
+
+		})
+
 	</script>
 </body>
 </html>

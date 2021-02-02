@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palindrome</title>
+	<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container">
+		
+		<input type="text" name="" id="saisie">
+		<button class="btn btn-success maclasse">Lancer le test</button>
+
+		<div class="ok"></div>
+		<div class="ko"></div>
+	</div>
+
+	<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+	<script type="text/javascript">
+		$('.maclasse').click(function () {
+			var ma_saisie = $('#saisie').val();
+			console.log(ma_saisie);
+
+			var mot_saisie = ma_saisie.split("");
+
+			console.log("split: " +mot_saisie)
+
+			mot_saisie = mot_saisie.reverse();
+			console.log("reverse: " +mot_saisie)
+
+			mot_saisie = mot_saisie.join('');
+			console.log("join: " +mot_saisie)
+
+			if (mot_saisie == ma_saisie) {
+				$('.ok').html('<div class="alert alert-success" role="alert">' +ma_saisie+' est un palindrome</div>');
+			}else{
+				$('.ko').html('<div class="alert alert-danger" role="alert">' +ma_saisie+' est  pas un palindrome</div>');
+
+			}
+		})
+	</script>
+</body>
+</html>
