@@ -29,3 +29,12 @@ ul.hover_block li img{
 
 	width: 400px; 
 }
+
+/***************************************/
+
+.resultat{
+	display: none;
+	background: gray;
+	margin: 10px;
+	padding: 20px;
+}
