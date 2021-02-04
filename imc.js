@@ -1,3 +1,9 @@
+
+var nom = $('#nom').val();
+
+console.log(nom)
+
+
 $(document).ready(function () {
 	
 	$('form').submit(function () {
@@ -39,7 +45,7 @@ $(document).ready(function () {
 
 	//$('.moussa').parent().addClass('afpa');
 	
-	$('.moussa').parents().addClass('afpa');
+	$('.moussa').parents('section').addClass('cool');
 
 	$('.test').children().removeClass('cda')
 
@@ -58,10 +64,12 @@ $(document).ready(function () {
 
 		//Parent de objet parent
 		//console.log($(this).parent());
+		//console.log($(this).parent());
 
 		$(this).parent().siblings().removeClass('active');
 
 		$(this).parent().addClass('active')
+
 	})
 
 
